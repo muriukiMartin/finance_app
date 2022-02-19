@@ -35,7 +35,7 @@ class _NewTransactionState extends State<NewTransaction> {
             TextField(
               decoration: InputDecoration(labelText: 'Title'),
               controller: titleController,
-              onSubmitted: (_) => submitTransaction(),
+              // onSubmitted: (_) => submitTransaction(),
               // onChanged: (value) {
               //   titleInput = value;
               // },
@@ -44,7 +44,7 @@ class _NewTransactionState extends State<NewTransaction> {
               decoration: InputDecoration(labelText: 'Amount'),
               controller: amountController,
               keyboardType: TextInputType.number,
-              onSubmitted: (_) => submitTransaction(),
+              // onSubmitted: (_) => submitTransaction(),
               // onChanged: (value) => amountInput = value,
             ),
             RaisedButton(
@@ -52,7 +52,7 @@ class _NewTransactionState extends State<NewTransaction> {
               child: Text('Add Transaction'),
               textColor: Color.fromARGB(255, 54, 2, 138),
               onPressed: () {
-                submitTransaction;
+                submitTransaction();
               },
             )
           ],
