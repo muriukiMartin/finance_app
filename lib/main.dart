@@ -14,7 +14,7 @@ class MyFinanceApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.green,
           accentColor: Colors.greenAccent,
-          cardColor: Colors.white38,
+          cardColor: Color.fromARGB(255, 149, 190, 197),
           fontFamily: 'Quicksand',
           textTheme: ThemeData.light().textTheme.copyWith(
               headline6: TextStyle(
