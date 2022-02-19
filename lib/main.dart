@@ -39,9 +39,29 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Container(
+            width: double.infinity,
             child: Card(
+              color: Colors.lightBlue,
               child: Text('CHART!'),
               elevation: 5,
+            ),
+          ),
+          Card(
+            elevation: 10,
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Title')
+                    ),
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Amount'),
+                  ),
+                  RaisedButton(color: Color.fromARGB(255, 67, 157, 216), child: Text('Add Transaction'), textColor: Color.fromARGB(255, 54, 2, 138),  onPressed: (){},)
+                ],
+              ),
             ),
           ),
           Column(
@@ -50,18 +70,18 @@ class MyHomePage extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.all(30),
+                      margin: EdgeInsets.all(20),
                       decoration: BoxDecoration(
                           border: Border.all(
                         color: Colors.purple,
-                        width: 3,
+                        width: 2,
                       )),
                       padding: EdgeInsets.all(15),
                       child: Text(
                         'KES ${tx.amount}',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                            fontSize: 16,
                             color: Colors.deepPurple),
                       ),
                     ),
@@ -72,7 +92,7 @@ class MyHomePage extends StatelessWidget {
                           tx.title,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontSize: 16,
                               color: Colors.red),
                         ),
                         Text(DateFormat('EEEE, d MMMM, yyyy').format(tx.date),
