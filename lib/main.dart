@@ -9,7 +9,12 @@ class MyFinanceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter App',
+      title: 'Personal Expenses ',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        accentColor: Colors.greenAccent,
+        cardColor: Colors.white38,
+      ),
       home: MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
@@ -66,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Finance Manager'),
+        title: Text('Personal Expenses'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -82,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               width: double.infinity,
               child: Card(
-                color: Colors.lightBlue,
+                color: Theme.of(context).primaryColor,
                 child: Text('CHART!'),
                 elevation: 5,
               ),
